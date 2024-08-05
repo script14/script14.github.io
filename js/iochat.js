@@ -89,7 +89,7 @@ $(document).ready(function() {
   let lastTime = null;
 
   /*-- IOGames Chat server (which uses wss websockets, which reminds me of socket.io) --*/
-  const client = new Client("wss://138.201.55.37/server", "@global", function(msg) {
+  const client = new Client("ws://138.201.55.37/server", "@global", function(msg) {
     lastTime = new Date();      
     chatMessage("user", msg);
   });
