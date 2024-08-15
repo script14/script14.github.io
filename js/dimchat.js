@@ -646,6 +646,7 @@ function escapeHTML(unsafe) {
 if (localStorage.admin) {
     document.getElementById("messages2").maxLength = 99999;
 }
+var isTabFocused = true;
 function connectChat() {
     client = new WebSocket("wss://dimden.dev/services/chat/");
     client.binaryType = "arraybuffer";
