@@ -679,19 +679,12 @@ function connectChat() {
                 return c.id === id;
             });
             if (!_c2) {
-                var cursor = document.createElement("img");
-                cursor.src = "";
-                cursor.className = "cursor";
-                cursor.id = "cursor-".concat(joinedId);
-                cursorsDiv.appendChild(cursor);
                 _c2 = {
                     id: id,
-                    cursor: cursor,
                     x: x,
                     y: y,
                     h: h,
                 };
-                cursors.push(_c2);
             }
             _c2.x = x;
             _c2.y = y;
@@ -720,32 +713,6 @@ function connectChat() {
               , _x2 = _msg$data$split$1$spl2[1]
               , _y = _msg$data$split$1$spl2[2]
               , _h = _msg$data$split$1$spl2[3];
-            if (_joinedId === currentId)
-                return;
-            _x2 = Math.min(_x2, innerWidth - rectLeft - 50);
-            _y = Math.min(_y, window.document.body.clientHeight - 100);
-            var _cursor = document.createElement("img");
-            _cursor.src = "";
-            _cursor.className = "cursor";
-            var _ratio = document.body.clientHeight / _h;
-            _cursor.style.left = _x2 + "px";
-            _cursor.style.top = _y * _ratio + "px";
-            _cursor.hidden = true;
-            if (_x2 === 0 && _y === 0)
-                _cursor.hidden = true;
-            else
-                _cursor.hidden = false;
-            _cursor.id = "cursor-".concat(_joinedId);
-            cursorsDiv.appendChild(_cursor);
-            cursors.push({
-                id: _joinedId,
-                cursor: _cursor,
-                x: _x2,
-                y: _y,
-                h: _h,
-                lastMove: Date.now() - 61000,
-            });
-            return;
         }
         if (msg.data.startsWith("Left: ")) {
             var leftId = +msg.data.split(": ")[1];
