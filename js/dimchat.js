@@ -1080,7 +1080,7 @@ if (!isSlow)
             }
             ;
             stopRain();
-        } else if (text.endsWith("gravity") && document.activeElement !== document.getElementById("message")) {
+        } else if (text.endsWith("gravity") && document.activeElement !== document.getElementById("messages2")) {
             var script = document.createElement("script");
             script.src = "/js/gravity.js";
             document.body.appendChild(script);
@@ -1160,7 +1160,7 @@ function escapeHTML(unsafe) {
     return unsafe.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "’");
 }
 if (localStorage.admin) {
-    document.getElementById("message").maxLength = 99999;
+    document.getElementById("messages2").maxLength = 99999;
 }
 function connectChat() {
     client = new WebSocket("wss://dimden.dev/services/chat/");
@@ -1275,7 +1275,7 @@ function connectChat() {
                 return;
             name.className = "chat-name chat-name-local";
         } else {
-            if (!isTabFocused || document.activeElement.id !== "message") {
+            if (!isTabFocused || document.activeElement.id !== "messages2") {
                 if (Date.now() - chatJoin > 2500 && localStorage.mutechat != "1")
                     newmsgsound.play();
             }
@@ -1300,7 +1300,7 @@ function connectChat() {
         } catch (e) {}
         var message = document.createElement("div");
         message.className = "chat-message";
-        var messages = document.getElementById("messages");
+        var messages = document.getElementById("messages2");
         message.appendChild(name);
         message.appendChild(text);
         message.appendChild(date);
@@ -1334,7 +1334,7 @@ function connectChat() {
     ;
     client.onclose = function() {
         currentId = undefined;
-        var messages = document.getElementById("messages");
+        var messages = document.getElementById("messages2");
         messages.innerText = "";
         messages.textContent = "";
         if (client.onmessage) {
@@ -1368,7 +1368,7 @@ setInterval(function() {
 connectChat();
 let lastMessageSentDate = 0;
 document.getElementById("send").onclick = function() {
-    var msg = document.getElementById("message").value;
+    var msg = document.getElementById("messages2").value;
     if (msg.startsWith("/nick ")) {
         localStorage.setItem("nick", msg.slice(6));
         client.send(JSON.stringify({
@@ -1396,10 +1396,10 @@ document.getElementById("send").onclick = function() {
             value: msg,
         }));
     }
-    document.getElementById("message").value = "";
+    document.getElementById("messages2").value = "";
 }
 ;
-document.getElementById("message").onkeydown = function(e) {
+document.getElementById("messages2").onkeydown = function(e) {
     if (e.key === "Enter" || e.key === "NumpadEnter") {
         document.getElementById("send").click();
     }
@@ -1698,7 +1698,7 @@ document.getElementById("brimstone").onclick = function() {
                     document.getElementById("projects-banner").style.filter = "brightness(0)";
                     document.getElementById("mewo").style.display = "none";
                     document.getElementById("hotel").style.filter = "brightness(0)";
-                    document.getElementById("message").style.filter = "brightness(0)";
+                    document.getElementById("messages2").style.filter = "brightness(0)";
                     for (var _i2 in letters) {
                         letters[_i2].style.filter = "brightness(0.1) grayscale(1)";
                     }
