@@ -9,6 +9,7 @@ function _typeof(obj) {
     ),
     _typeof(obj));
 }
+var rectLeft = 80;
 function _regeneratorRuntime() {
     "use strict";
     /*!regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE*/
