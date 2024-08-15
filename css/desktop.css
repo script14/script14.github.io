@@ -1338,3 +1338,6 @@ footer .item:last-child {
  width:50px;
  height:50px;
 }
+.chat-name {
+  color: light-blue;
+}
