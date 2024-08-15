@@ -797,13 +797,13 @@ function connectChat() {
                 hour12: false,
             }), " in Ukraine");
         } catch (e) {}
-        var message = document.createElement("div");
-        message.className = "chat-message";
+        var message2 = document.createElement("div");
+        message2.className = "chat-message";
         var messages = document.getElementById("messages2");
-        message.appendChild(name);
-        message.appendChild(text);
-        message.appendChild(date);
-        messages.appendChild(message);
+        message2.appendChild(name);
+        message2.appendChild(text);
+        message2.appendChild(date);
+        messages.appendChild(message2);
         setTimeout(function() {
             if (messages.scrollHeight - messages.scrollTop < 300 || Date.now() - chatJoin < 5000)
                 messages.scrollTop = messages.scrollHeight;
@@ -868,7 +868,7 @@ connectChat();
 let lastMessageSentDate = 0;
 
 document.getElementById("send").onclick = function() {
-    var msg = document.getElementById("message").value;
+    var msg = document.getElementById("message2").value;
     if (msg.startsWith("/nick ")) {
         localStorage.setItem("nick", msg.slice(6));
         client.send(JSON.stringify({
@@ -896,7 +896,7 @@ document.getElementById("send").onclick = function() {
             value: msg,
         }));
     }
-    document.getElementById("message").value = "";
+    document.getElementById("message2").value = "";
 }
 ;
 
