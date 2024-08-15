@@ -357,7 +357,7 @@ textarea::placeholder {
 }
 input[type="text"],
 select {
-    max-width: 100%;
+    max-width: calc(100% - 50px);
     height: 45px;
     border-radius: 0;
 }
