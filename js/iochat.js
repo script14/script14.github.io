@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  
+
+  /* first chat = iogames fun chat */
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
   console.log("sidebar");
@@ -9,12 +10,20 @@ $(document).ready(function() {
   const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   console.log("toggleButtonFullscreen");
+  /* second chat = chat.server.bzmb.eu / used to be minnit */
   const secondChatButton = document.getElementById('secondChatButton');
   const secondChatServer = document.getElementById('secondChatServer');
   console.log("secondChatServer");
   const secondChatButtonMobile = document.getElementById('secondChatButtonMobile');
   console.log("secondChatServerMobile");
-  
+  /* third chat = cbox ws */
+  const thirdChatButton = document.getElementById('thirdChatButton');
+  const thirdChatServer = document.getElementById('thirdChatServer');
+  console.log("thirdChatServer");
+  const thirdChatButtonMobile = document.getElementById('thirdChatButtonMobile');
+  console.log("thirdChatServerMobile");
+
+  /* first chat = iogames fun chat */
   toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
@@ -45,6 +54,7 @@ $(document).ready(function() {
     }
   }
   toggleButtonFullscreen.addEventListener('click', toggleFullscreen);
+  /* second chat = chat.server.bzmb.eu / used to be minnit */
   // Second chat button
   secondChatButton.addEventListener('click', () => {
     console.log("button clicked");
@@ -55,6 +65,18 @@ $(document).ready(function() {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
+  /* third chat = cbox ws */
+  // Third chat button
+  thirdChatButton.addEventListener('click', () => {
+    console.log("button clicked");
+    thirdChatServer.classList.toggle('hide');
+  });
+  // Third chat button mobile
+  thirdChatButtonMobile.addEventListener('click', () => {
+    console.log("button clicked");
+    thirdChatServer.classList.toggle('hide');
+  });
+
   
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
