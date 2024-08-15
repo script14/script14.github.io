@@ -851,6 +851,40 @@ setInterval(function() {
 }, 1000);
 connectChat();
 let lastMessageSentDate = 0;
+
+document.getElementById("send").onclick = function() {
+    var msg = document.getElementById("message").value;
+    if (msg.startsWith("/nick ")) {
+        localStorage.setItem("nick", msg.slice(6));
+        client.send(JSON.stringify({
+            operation: "nick",
+            value: msg.slice(6),
+        }));
+    } else if (msg.startsWith("/ban ")) {
+        client.send(JSON.stringify({
+            operation: "ban",
+            value: msg.slice(5),
+        }));
+    } else if (msg.startsWith("/unban ")) {
+        client.send(JSON.stringify({
+            operation: "unban",
+            value: msg.slice(7),
+        }));
+    } else {
+        if (msg.startsWith("/"))
+            return;
+        if (Date.now() - lastMessageSentDate < 1000)
+            return;
+        lastMessageSentDate = Date.now();
+        client.send(JSON.stringify({
+            operation: "send",
+            value: msg,
+        }));
+    }
+    document.getElementById("message").value = "";
+}
+;
+
 document.getElementById("send").onclick = function() {
     var msg = document.getElementById("messages2").value;
     if (msg.startsWith("/nick ")) {
