@@ -638,7 +638,20 @@ var pon = false;
 var client, chatJoin = 0, currentId = undefined;
 var cursors = [];
 var ignoreLocals = 0;
-var newmsgsound = new Audio("/sounds/imrcv.mp3");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function escapeHTML(unsafe) {
