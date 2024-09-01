@@ -1,4 +1,4 @@
-$(document).ready(function() {
+f$(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
   // client  JS //
@@ -1322,7 +1322,7 @@ function relativeTime(date, period, short) {
 var text = "";
 var pon = false;
 
-var client, chatJoin = 0, currentId = undefined;
+var chatclient, chatJoin = 0, currentId = undefined;
 var cursors = [];
 var ignoreLocals = 0;
 
