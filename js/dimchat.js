@@ -691,9 +691,9 @@ function connectChat() {
             _c2.h = h;
             _c2.lastMove = Date.now();
             var ratio = document.body.clientHeight / h;
-            _c2.cursor.style.left = x + "px";
-            _c2.cursor.style.top = y * ratio + "px";
-            _c2.cursor.hidden = false;
+            //_c2.cursor.style.left = x + "px";
+            //_c2.cursor.style.top = y * ratio + "px";
+            //_c2.cursor.hidden = false;
             if (x === 0 && y === 0)
                 _c2.cursor.hidden = true;
             else
