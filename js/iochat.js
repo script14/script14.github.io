@@ -1622,7 +1622,6 @@ mutechat.addEventListener("change", function() {
         delete localStorage.mutechat;
     }
 });
-});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // jquery script
@@ -5712,4 +5711,6 @@ mutechat.addEventListener("change", function() {
         e || (C.jQuery = C.$ = k),
         k
     );
+});
+
 });
