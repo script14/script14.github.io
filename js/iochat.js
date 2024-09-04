@@ -1546,3 +1546,4 @@ mutechat.addEventListener("change", function() {
         delete localStorage.mutechat;
     }
 });
+});
