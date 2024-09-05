@@ -338,6 +338,10 @@
     scrollbar-color: transparent rgba(255, 255, 255, 0.05);
     scrollbar-width: none;
     backdrop-filter: blur(30px);
+    bottom: -1%;
+    height: 1000px;
+    position: absolute;
+    clip: rect(524px, 335px, 971px, 0px);
 }
 .draw {
     display: none;
