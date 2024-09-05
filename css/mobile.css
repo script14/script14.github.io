@@ -334,12 +334,20 @@
 .mob {
     z-index: 1
 }
-.chatalt {
+.chatalt-bzmb {
     scrollbar-color: transparent rgba(255, 255, 255, 0.05);
     scrollbar-width: none;
     backdrop-filter: blur(30px);
-    bottom: -1%;
-    height: 1000px;
+    top: 0%;
+    height: 100%;
+    position: absolute;
+}
+.chatalt-cbox {
+    scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+    scrollbar-width: none;
+    backdrop-filter: blur(30px);
+    top: 0%;
+    height: 100%;
     position: absolute;
     clip: rect(524px, 335px, 971px, 0px);
 }
