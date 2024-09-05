@@ -347,7 +347,15 @@
  scrollbar-color: transparent rgba(255, 255, 255, 0.05);
  scrollbar-width: none;
 }
-.chatalt {
+.chatalt-cbox {
+ backdrop-filter: blur(9px);
+ height: calc(100% - 50px);
+ position: absolute;
+ top: 50px;
+ scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+ scrollbar-width: none;
+}
+.chatalt-bzmb {
  backdrop-filter: blur(9px);
  height: calc(100% - 50px);
  position: absolute;
