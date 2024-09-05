@@ -32,21 +32,21 @@
   <body>
     <div class="main">
   <!-- dimchat.js below -->
-      <div id="chat2" class="box" style="width: 300px; text-wrap: wrap; top: 40px; position: absolute; height: calc(100% - 40px); backdrop-filter: blur(9px);">
-        <div id="messages2" style="width: 300px; height: 492px; text-wrap: wrap; overflow-y: scroll; margin: 10px; margin-top: 1rem;"></div>
-        <div id="bar" style="margin-top:4px; bottom: 0px; position: absolute; width: 300px;">
-          <input style="background-color: transparent;" type="text" id="message2" placeholder="Enter message - please be nice!" autocomplete="off" maxlength="300">
+      <div id="chat2" class="box">
+        <div id="messages2"></div>
+        <div id="bar">
+          <input class="inputstyle" type="text" id="message2" placeholder="Enter message - please be nice!" autocomplete="off" maxlength="300">
           <button id="send2" class="fa fa-lg fa-paper-plane"></button>
         </div>
       </div>
   <!-- Alternative Chat below (cbox) -->
-      <footer class="chatalt-cbox" style="scrollbar-color: transparent rgba(255, 255, 255, 0);scrollbar-width: none;height: 100%;">
-        <div class="item" id="thirdChatServer" style="scrollbar-color: transparent rgba(255, 255, 255, 0);scrollbar-width: none;height: 100%;">
-          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&amp;boxtag=KK9MuO" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="position; height: calc(100% - 50px);"></iframe>
+      <footer class="chatalt-cbox">
+        <div class="item" id="thirdChatServer">
+          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&amp;boxtag=KK9MuO" class="thirdChatClass" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
         </div>
       </footer>
-      <footer class="draw" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none; position: absolute; left: 300px; top: 50px;">
-        <div class="item hide" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none;">
+      <footer class="draw">
+        <div class="item hide cbox">
           <iframe src="https://draw.bzmb.eu" width="1000px" height="1000px" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none;"></iframe>	
         </div>
       </footer>
