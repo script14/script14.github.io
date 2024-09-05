@@ -1,3 +1,46 @@
+#messages2 {
+ width: 300px;
+ height: 492px;
+ text-wrap: wrap;
+ overflow-y: scroll;
+ margin: 10px;
+ margin-top: 1rem;
+}
+.box {
+ width: 300px;
+ text-wrap: wrap;
+ top: 40px;
+ position: absolute;
+ height: calc(100% - 40px);
+ backdrop-filter: blur(9px);
+}
+#bar {
+ margin-top:4px;
+ bottom: 0px;
+ position: absolute;
+ width: 300px;
+}
+.inputstyle{
+ background-color: transparent;
+}
+#thirdChatServer {
+ scrollbar-color: transparent rgba(255, 255, 255, 0);
+ scrollbar-width: none;height: 100%;
+}
+.thirdChatClass {
+ position: absolute;
+ height: calc(100% - 50px);
+}
+.draw {
+    display: none;
+    scrollbar-color: transparent rgba(255, 255, 255, 0); 
+    scrollbar-width: none; position: absolute;
+    left: 300px; top: 50px;
+}
+.cbox {
+ scrollbar-color: transparent rgba(255, 255, 255, 0);
+ scrollbar-width: none;
+}
 @font-face {
  font-family: 'Exo 2';
   url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -343,17 +386,14 @@
     position: absolute;
 }
 .chatalt-cbox {
-    scrollbar-color: transparent rgba(255, 255, 255, 0.05);
-    scrollbar-width: none;
+    scrollbar-color: transparent rgba(255, 255, 255, 0);
+    scrollbar-width: none;height: 100%;
     backdrop-filter: blur(30px);
     top: 0%;
     z-index: 0;
     height: 100%;
     position: absolute;
     clip: rect(524px, 335px, 971px, 0px);
-}
-.draw {
-    display: none;
 }
 #video-background {
     position: fixed;
