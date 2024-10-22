@@ -11,10 +11,13 @@
  }
 }
 .s3games {
- display:none
+ display: none;
 }
 .s3games.active {
- display:block
+ display: block;
+}
+.thirdChatClass {
+ height: 100%;
 }
 .s3games-in-progress {
  animation-name:in-progress;
