@@ -420,6 +420,19 @@ $(document).ready(function() {
         filterMessages();
     }
 
+    // Convert the pattern into a regex
+    const regexPattern = pattern.replace(/\*/g, '.*'); // Replace '*' with '.*' for regex
+    const regex = new RegExp(`^${regexPattern}`, 'i'); // Create a case-insensitive regex
+
+    // Check if the username matches the regex
+    if (regex.test(username)) {
+        console.log(`The username '${username}' has been blocked due to matching the pattern '${pattern}'.`);
+        blockedUsers.push(username);
+        updateBlockedUsersList();
+        filterMessages();
+        return;
+    }
+	  
     // Function to unblock all users
     function unblockAllUsers() {
         blockedUsers = ["a bot"];
