@@ -369,7 +369,7 @@ $(document).ready(function() {
     // BLOCK USERS FEATURE
     'use strict';
 
-    // Load blocked users from localStorage
+    // Load blocked users from localStorage "a bot", and "Guest8389"
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot", "Guest8389"];
 
     // Create the container for the blocked users list
