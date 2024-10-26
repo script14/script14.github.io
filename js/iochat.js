@@ -395,7 +395,7 @@ $(document).ready(function() {
     // Function to block a user
     function blockUser(username) {
         // Check if the username is "a bot"
-        if (username.toLowerCase() === "a bot") {
+        if (username.toLowerCase() === "a bot", "Guest8389") {
             // Add "a bot" to the blockedUsers array
             blockedUsers.push(username);
             updateBlockedUsersList();
@@ -435,8 +435,8 @@ $(document).ready(function() {
 	  
     // Function to unblock all users
     function unblockAllUsers() {
-        blockedUsers = ["a bot"];
-        updateBlockedUsersList("a bot");
+        blockedUsers = ["a bot", "Guest8389"];
+        updateBlockedUsersList("a bot", "Guest8389");
         filterMessages();
     }
 
@@ -495,7 +495,7 @@ $(document).ready(function() {
     }
 
     // Initial call to display the blocked users and filter messages
-    updateBlockedUsersList("a bot");
+    updateBlockedUsersList("a bot", "Guest8389");
     filterMessages();
 
     // Function to update the username color
